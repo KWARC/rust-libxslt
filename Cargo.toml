@@ -1,0 +1,24 @@
+[package]
+name = "libxslt"
+version = "0.1.0"
+authors = ["Deyan Ginev <d.ginev@jacobs-university.de>"]
+description = "A Rust wrapper for libxslt - The XSLT C library for GNOME"
+repository = "https://github.com/KWARC/rust-libxslt"
+documentation = "http://kwarc.github.io/rust-libxslt/libxslt/index.html"
+readme = "README.md"
+license = "MIT"
+
+build = "build.rs"
+exclude = [
+  "scripts/*"
+]
+
+[dependencies]
+libc = "0.2"
+libxml = "0.2.2"
+
+[build-dependencies]
+pkg-config = "0.3.2"
+
+[lib]
+name = "libxslt"
