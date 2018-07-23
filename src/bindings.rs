@@ -3,6 +3,7 @@
 #![allow(non_snake_case)]
 #![allow(dead_code)]
 #![allow(improper_ctypes)]
+#![allow(missing_docs)]
 
 // Reuse the libxml bindings
 pub use libxml::bindings::*;
@@ -153,9 +154,7 @@ fn bindgen_test_layout__xsltNumberData() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltNumberData>())).digitsPerGroup as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltNumberData>())).digitsPerGroup as *const _ as usize },
     44usize,
     concat!(
       "Offset of field: ",
@@ -165,9 +164,7 @@ fn bindgen_test_layout__xsltNumberData() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltNumberData>())).groupingCharacter as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltNumberData>())).groupingCharacter as *const _ as usize },
     48usize,
     concat!(
       "Offset of field: ",
@@ -257,9 +254,7 @@ fn bindgen_test_layout__xsltFormatNumberInfo() {
     concat!("Alignment of ", stringify!(_xsltFormatNumberInfo))
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).integer_hash as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).integer_hash as *const _ as usize },
     0usize,
     concat!(
       "Offset of field: ",
@@ -281,9 +276,7 @@ fn bindgen_test_layout__xsltFormatNumberInfo() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).frac_digits as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).frac_digits as *const _ as usize },
     8usize,
     concat!(
       "Offset of field: ",
@@ -293,9 +286,7 @@ fn bindgen_test_layout__xsltFormatNumberInfo() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).frac_hash as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).frac_hash as *const _ as usize },
     12usize,
     concat!(
       "Offset of field: ",
@@ -315,9 +306,7 @@ fn bindgen_test_layout__xsltFormatNumberInfo() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).multiplier as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).multiplier as *const _ as usize },
     20usize,
     concat!(
       "Offset of field: ",
@@ -327,9 +316,7 @@ fn bindgen_test_layout__xsltFormatNumberInfo() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).add_decimal as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltFormatNumberInfo>())).add_decimal as *const _ as usize },
     24usize,
     concat!(
       "Offset of field: ",
@@ -392,9 +379,7 @@ fn bindgen_test_layout__xsltRuntimeExtra__bindgen_ty_1() {
     concat!("Alignment of ", stringify!(_xsltRuntimeExtra__bindgen_ty_1))
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltRuntimeExtra__bindgen_ty_1>())).ptr as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltRuntimeExtra__bindgen_ty_1>())).ptr as *const _ as usize },
     0usize,
     concat!(
       "Offset of field: ",
@@ -748,9 +733,7 @@ fn bindgen_test_layout__xsltDecimalFormat() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltDecimalFormat>())).patternSeparator as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltDecimalFormat>())).patternSeparator as *const _ as usize },
     24usize,
     concat!(
       "Offset of field: ",
@@ -790,9 +773,7 @@ fn bindgen_test_layout__xsltDecimalFormat() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltDecimalFormat>())).decimalPoint as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltDecimalFormat>())).decimalPoint as *const _ as usize },
     56usize,
     concat!(
       "Offset of field: ",
@@ -1174,9 +1155,8 @@ pub const xsltStyleType_XSLT_FUNC_VARIABLE: xsltStyleType = 20;
 pub const xsltStyleType_XSLT_FUNC_WHEN: xsltStyleType = 21;
 pub const xsltStyleType_XSLT_FUNC_EXTENSION: xsltStyleType = 22;
 pub type xsltStyleType = u32;
-pub type xsltElemPreCompDeallocator = ::std::option::Option<
-  unsafe extern "C" fn(comp: xsltElemPreCompPtr),
->;
+pub type xsltElemPreCompDeallocator =
+  ::std::option::Option<unsafe extern "C" fn(comp: xsltElemPreCompPtr)>;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xsltElemPreComp {
@@ -1442,9 +1422,7 @@ fn bindgen_test_layout__xsltStylePreComp() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylePreComp>())).lower_first as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylePreComp>())).lower_first as *const _ as usize },
     96usize,
     concat!(
       "Offset of field: ",
@@ -1594,9 +1572,7 @@ fn bindgen_test_layout__xsltStylePreComp() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylePreComp>())).has_filename as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylePreComp>())).has_filename as *const _ as usize },
     208usize,
     concat!(
       "Offset of field: ",
@@ -1969,9 +1945,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).templatesHash as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).templatesHash as *const _ as usize },
     80usize,
     concat!(
       "Offset of field: ",
@@ -2071,9 +2045,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).attributeSets as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).attributeSets as *const _ as usize },
     160usize,
     concat!(
       "Offset of field: ",
@@ -2153,9 +2125,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).omitXmlDeclaration as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).omitXmlDeclaration as *const _ as usize },
     224usize,
     concat!(
       "Offset of field: ",
@@ -2165,9 +2135,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).decimalFormat as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).decimalFormat as *const _ as usize },
     232usize,
     concat!(
       "Offset of field: ",
@@ -2187,9 +2155,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).doctypePublic as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).doctypePublic as *const _ as usize },
     248usize,
     concat!(
       "Offset of field: ",
@@ -2199,9 +2165,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).doctypeSystem as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).doctypeSystem as *const _ as usize },
     256usize,
     concat!(
       "Offset of field: ",
@@ -2271,9 +2235,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).exclPrefixTab as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).exclPrefixTab as *const _ as usize },
     304usize,
     concat!(
       "Offset of field: ",
@@ -2293,9 +2255,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).exclPrefixMax as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).exclPrefixMax as *const _ as usize },
     316usize,
     concat!(
       "Offset of field: ",
@@ -2395,9 +2355,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).literal_result as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).literal_result as *const _ as usize },
     384usize,
     concat!(
       "Offset of field: ",
@@ -2417,9 +2375,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).forwards_compatible as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).forwards_compatible as *const _ as usize },
     400usize,
     concat!(
       "Offset of field: ",
@@ -2429,9 +2385,7 @@ fn bindgen_test_layout__xsltStylesheet() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltStylesheet>())).namedTemplates as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltStylesheet>())).namedTemplates as *const _ as usize },
     408usize,
     concat!(
       "Offset of field: ",
@@ -2484,9 +2438,7 @@ fn bindgen_test_layout__xsltTransformCache() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformCache>())).stackItems as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformCache>())).stackItems as *const _ as usize },
     16usize,
     concat!(
       "Offset of field: ",
@@ -2496,9 +2448,7 @@ fn bindgen_test_layout__xsltTransformCache() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformCache>())).nbStackItems as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformCache>())).nbStackItems as *const _ as usize },
     24usize,
     concat!(
       "Offset of field: ",
@@ -2631,9 +2581,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).templNr as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).templNr as *const _ as usize },
     24usize,
     concat!(
       "Offset of field: ",
@@ -2643,9 +2591,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).templMax as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).templMax as *const _ as usize },
     28usize,
     concat!(
       "Offset of field: ",
@@ -2655,9 +2601,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).templTab as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).templTab as *const _ as usize },
     32usize,
     concat!(
       "Offset of field: ",
@@ -2687,9 +2631,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).varsMax as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).varsMax as *const _ as usize },
     52usize,
     concat!(
       "Offset of field: ",
@@ -2699,9 +2641,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).varsTab as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).varsTab as *const _ as usize },
     56usize,
     concat!(
       "Offset of field: ",
@@ -2711,9 +2651,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).varsBase as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).varsBase as *const _ as usize },
     64usize,
     concat!(
       "Offset of field: ",
@@ -2723,9 +2661,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).extFunctions as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).extFunctions as *const _ as usize },
     72usize,
     concat!(
       "Offset of field: ",
@@ -2735,9 +2671,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).extElements as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).extElements as *const _ as usize },
     80usize,
     concat!(
       "Offset of field: ",
@@ -2747,9 +2681,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).extInfos as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).extInfos as *const _ as usize },
     88usize,
     concat!(
       "Offset of field: ",
@@ -2769,9 +2701,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).modeURI as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).modeURI as *const _ as usize },
     104usize,
     concat!(
       "Offset of field: ",
@@ -2781,9 +2711,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).docList as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).docList as *const _ as usize },
     112usize,
     concat!(
       "Offset of field: ",
@@ -2793,9 +2721,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).document as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).document as *const _ as usize },
     120usize,
     concat!(
       "Offset of field: ",
@@ -2815,9 +2741,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).nodeList as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).nodeList as *const _ as usize },
     136usize,
     concat!(
       "Offset of field: ",
@@ -2847,9 +2771,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).xpathCtxt as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).xpathCtxt as *const _ as usize },
     160usize,
     concat!(
       "Offset of field: ",
@@ -2869,9 +2791,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).globalVars as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).globalVars as *const _ as usize },
     176usize,
     concat!(
       "Offset of field: ",
@@ -2891,9 +2811,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).xinclude as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).xinclude as *const _ as usize },
     192usize,
     concat!(
       "Offset of field: ",
@@ -2903,9 +2821,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).outputFile as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).outputFile as *const _ as usize },
     200usize,
     concat!(
       "Offset of field: ",
@@ -2915,9 +2831,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).profile as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).profile as *const _ as usize },
     208usize,
     concat!(
       "Offset of field: ",
@@ -2947,9 +2861,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).profMax as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).profMax as *const _ as usize },
     228usize,
     concat!(
       "Offset of field: ",
@@ -2959,9 +2871,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).profTab as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).profTab as *const _ as usize },
     232usize,
     concat!(
       "Offset of field: ",
@@ -2971,9 +2881,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>()))._private as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>()))._private as *const _ as usize },
     240usize,
     concat!(
       "Offset of field: ",
@@ -2983,9 +2891,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).extrasNr as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).extrasNr as *const _ as usize },
     248usize,
     concat!(
       "Offset of field: ",
@@ -2995,9 +2901,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).extrasMax as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).extrasMax as *const _ as usize },
     252usize,
     concat!(
       "Offset of field: ",
@@ -3017,9 +2921,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).styleList as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).styleList as *const _ as usize },
     264usize,
     concat!(
       "Offset of field: ",
@@ -3059,9 +2961,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).sortfunc as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).sortfunc as *const _ as usize },
     296usize,
     concat!(
       "Offset of field: ",
@@ -3081,9 +2981,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).persistRVT as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).persistRVT as *const _ as usize },
     312usize,
     concat!(
       "Offset of field: ",
@@ -3093,9 +2991,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).ctxtflags as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).ctxtflags as *const _ as usize },
     320usize,
     concat!(
       "Offset of field: ",
@@ -3105,9 +3001,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).lasttext as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).lasttext as *const _ as usize },
     328usize,
     concat!(
       "Offset of field: ",
@@ -3117,9 +3011,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).lasttsize as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).lasttsize as *const _ as usize },
     336usize,
     concat!(
       "Offset of field: ",
@@ -3129,9 +3021,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).lasttuse as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).lasttuse as *const _ as usize },
     340usize,
     concat!(
       "Offset of field: ",
@@ -3141,9 +3031,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).debugStatus as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).debugStatus as *const _ as usize },
     344usize,
     concat!(
       "Offset of field: ",
@@ -3153,9 +3041,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).traceCode as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).traceCode as *const _ as usize },
     352usize,
     concat!(
       "Offset of field: ",
@@ -3165,9 +3051,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).parserOptions as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).parserOptions as *const _ as usize },
     360usize,
     concat!(
       "Offset of field: ",
@@ -3197,9 +3081,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).internalized as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).internalized as *const _ as usize },
     384usize,
     concat!(
       "Offset of field: ",
@@ -3289,9 +3171,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).localRVT as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).localRVT as *const _ as usize },
     440usize,
     concat!(
       "Offset of field: ",
@@ -3301,9 +3181,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).localRVTBase as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).localRVTBase as *const _ as usize },
     448usize,
     concat!(
       "Offset of field: ",
@@ -3313,9 +3191,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).keyInitLevel as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).keyInitLevel as *const _ as usize },
     456usize,
     concat!(
       "Offset of field: ",
@@ -3325,9 +3201,7 @@ fn bindgen_test_layout__xsltTransformContext() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<_xsltTransformContext>())).funcLevel as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<_xsltTransformContext>())).funcLevel as *const _ as usize },
     460usize,
     concat!(
       "Offset of field: ",
@@ -3716,9 +3590,8 @@ extern "C" {
     URI: *const xmlChar,
   ) -> ::std::os::raw::c_int;
 }
-pub type xsltTopLevelFunction = ::std::option::Option<
-  unsafe extern "C" fn(style: xsltStylesheetPtr, inst: xmlNodePtr),
->;
+pub type xsltTopLevelFunction =
+  ::std::option::Option<unsafe extern "C" fn(style: xsltStylesheetPtr, inst: xmlNodePtr)>;
 extern "C" {
   pub fn xsltRegisterExtModuleTopLevel(
     name: *const xmlChar,
@@ -5199,9 +5072,7 @@ fn bindgen_test_layout___va_list_tag() {
     )
   );
   assert_eq!(
-    unsafe {
-      &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize
-    },
+    unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
     8usize,
     concat!(
       "Offset of field: ",

@@ -6,7 +6,7 @@ extern crate libc;
 extern crate libxml;
 
 // Bindings to the C interface
-mod bindings;
+pub mod bindings;
 /// Parser for loading an XSLT stylesheet from a file or string source.
 pub mod parser;
 /// Stylesheet functionality for Document transformation.
