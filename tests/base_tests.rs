@@ -14,7 +14,9 @@ use libxslt::parser as xslt_parser;
 fn hello_builder() {
   let xml_parser = XMLParser::default();
 
-  let source = xml_parser.parse_file("tests/data/1.xml").unwrap();
+  let source_result = xml_parser.parse_file("tests/data/1.xml");
+  assert!(source_result.is_ok());
+  let source = source_result.unwrap();
   let stylesheet_result = xslt_parser::parse_file("tests/data/1.xsl");
   assert!(stylesheet_result.is_ok());
   let mut stylesheet = stylesheet_result.unwrap();
