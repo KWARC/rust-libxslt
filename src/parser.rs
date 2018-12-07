@@ -1,8 +1,8 @@
 use std::ffi::CString;
 use std::path::Path;
 
-use bindings::*;
-use stylesheet::Stylesheet;
+use crate::bindings::*;
+use crate::stylesheet::Stylesheet;
 
 /// Load an XSLT stylesheet from (typically `.xsl`) file.
 pub fn parse_file(path_str: &str) -> Result<Stylesheet, String> {

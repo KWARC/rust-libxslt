@@ -1,7 +1,7 @@
 use std::error::Error;
 use std::ptr;
 
-use bindings::*;
+use crate::bindings::*;
 use libxml::tree::Document;
 
 /// An XSLT stylesheet object which can `transform` a libxml2 `Document`
