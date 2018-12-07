@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Stylesheet","An XSLT stylesheet object which can `transform` a libxml2 `Document`"]]});

@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `_xmlParserCtxt` struct in crate `libxslt`."><meta name="keywords" content="rust, rustlang, rust-lang, _xmlParserCtxt"><title>libxslt::bindings::_xmlParserCtxt - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct _xmlParserCtxt</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.sax">sax</a><a href="#structfield.userData">userData</a><a href="#structfield.myDoc">myDoc</a><a href="#structfield.wellFormed">wellFormed</a><a href="#structfield.replaceEntities">replaceEntities</a><a href="#structfield.version">version</a><a href="#structfield.encoding">encoding</a><a href="#structfield.standalone">standalone</a><a href="#structfield.html">html</a><a href="#structfield.input">input</a><a href="#structfield.inputNr">inputNr</a><a href="#structfield.inputMax">inputMax</a><a href="#structfield.inputTab">inputTab</a><a href="#structfield.node">node</a><a href="#structfield.nodeNr">nodeNr</a><a href="#structfield.nodeMax">nodeMax</a><a href="#structfield.nodeTab">nodeTab</a><a href="#structfield.record_info">record_info</a><a href="#structfield.node_seq">node_seq</a><a href="#structfield.errNo">errNo</a><a href="#structfield.hasExternalSubset">hasExternalSubset</a><a href="#structfield.hasPErefs">hasPErefs</a><a href="#structfield.external">external</a><a href="#structfield.valid">valid</a><a href="#structfield.validate">validate</a><a href="#structfield.vctxt">vctxt</a><a href="#structfield.instate">instate</a><a href="#structfield.token">token</a><a href="#structfield.directory">directory</a><a href="#structfield.name">name</a><a href="#structfield.nameNr">nameNr</a><a href="#structfield.nameMax">nameMax</a><a href="#structfield.nameTab">nameTab</a><a href="#structfield.nbChars">nbChars</a><a href="#structfield.checkIndex">checkIndex</a><a href="#structfield.keepBlanks">keepBlanks</a><a href="#structfield.disableSAX">disableSAX</a><a href="#structfield.inSubset">inSubset</a><a href="#structfield.intSubName">intSubName</a><a href="#structfield.extSubURI">extSubURI</a><a href="#structfield.extSubSystem">extSubSystem</a><a href="#structfield.space">space</a><a href="#structfield.spaceNr">spaceNr</a><a href="#structfield.spaceMax">spaceMax</a><a href="#structfield.spaceTab">spaceTab</a><a href="#structfield.depth">depth</a><a href="#structfield.entity">entity</a><a href="#structfield.charset">charset</a><a href="#structfield.nodelen">nodelen</a><a href="#structfield.nodemem">nodemem</a><a href="#structfield.pedantic">pedantic</a><a href="#structfield._private">_private</a><a href="#structfield.loadsubset">loadsubset</a><a href="#structfield.linenumbers">linenumbers</a><a href="#structfield.catalogs">catalogs</a><a href="#structfield.recovery">recovery</a><a href="#structfield.progressive">progressive</a><a href="#structfield.dict">dict</a><a href="#structfield.atts">atts</a><a href="#structfield.maxatts">maxatts</a><a href="#structfield.docdict">docdict</a><a href="#structfield.str_xml">str_xml</a><a href="#structfield.str_xmlns">str_xmlns</a><a href="#structfield.str_xml_ns">str_xml_ns</a><a href="#structfield.sax2">sax2</a><a href="#structfield.nsNr">nsNr</a><a href="#structfield.nsMax">nsMax</a><a href="#structfield.nsTab">nsTab</a><a href="#structfield.attallocs">attallocs</a><a href="#structfield.pushTab">pushTab</a><a href="#structfield.attsDefault">attsDefault</a><a href="#structfield.attsSpecial">attsSpecial</a><a href="#structfield.nsWellFormed">nsWellFormed</a><a href="#structfield.options">options</a><a href="#structfield.dictNames">dictNames</a><a href="#structfield.freeElemsNr">freeElemsNr</a><a href="#structfield.freeElems">freeElems</a><a href="#structfield.freeAttrsNr">freeAttrsNr</a><a href="#structfield.freeAttrs">freeAttrs</a><a href="#structfield.lastError">lastError</a><a href="#structfield.parseMode">parseMode</a><a href="#structfield.nbentities">nbentities</a><a href="#structfield.sizeentities">sizeentities</a><a href="#structfield.nodeInfo">nodeInfo</a><a href="#structfield.nodeInfoNr">nodeInfoNr</a><a href="#structfield.nodeInfoMax">nodeInfoMax</a><a href="#structfield.nodeInfoTab">nodeInfoTab</a><a href="#structfield.input_id">input_id</a><a href="#structfield.sizeentcopy">sizeentcopy</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Clone">Clone</a><a href="#impl-Copy">Copy</a><a href="#impl-Debug">Debug</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">!Send</a><a href="#impl-Sync">!Sync</a></div><a class="sidebar-title" href="#blanket-implementations">Blanket Implementations</a><div class="sidebar-links"><a href="#impl-From">From</a><a href="#impl-Into">Into</a><a href="#impl-ToOwned">ToOwned</a><a href="#impl-TryFrom">TryFrom</a><a href="#impl-Borrow">Borrow</a><a href="#impl-BorrowMut">BorrowMut</a><a href="#impl-TryInto">TryInto</a><a href="#impl-Any">Any</a></div></div><p class='location'><a href='../index.html'>libxslt</a>::<wbr><a href='index.html'>bindings</a></p><script>window.sidebarCurrent = {name: '_xmlParserCtxt', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/libxml/bindings.rs.html#7661-7751' title='goto source code'>[src]</a></span><span class='in-band'>Struct <a href='../index.html'>libxslt</a>::<wbr><a href='index.html'>bindings</a>::<wbr><a class="struct" href=''>_xmlParserCtxt</a></span></h1><div class="docblock type-decl hidden-by-usual-hider"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct _xmlParserCtxt {
+    pub sax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlSAXHandler.html" title="struct libxslt::bindings::_xmlSAXHandler">_xmlSAXHandler</a>,
+    pub userData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a>,
+    pub myDoc: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlDoc.html" title="struct libxslt::bindings::_xmlDoc">_xmlDoc</a>,
+    pub wellFormed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub replaceEntities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub version: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub encoding: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub standalone: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub html: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub input: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a>,
+    pub inputNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub inputMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub inputTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a>,
+    pub node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a>,
+    pub nodeNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodeMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodeTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a>,
+    pub record_info: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub node_seq: <a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfoSeq.html" title="struct libxslt::bindings::_xmlParserNodeInfoSeq">_xmlParserNodeInfoSeq</a>,
+    pub errNo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub hasExternalSubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub hasPErefs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub external: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub valid: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub validate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub vctxt: <a class="struct" href="../../libxslt/bindings/struct._xmlValidCtxt.html" title="struct libxslt::bindings::_xmlValidCtxt">_xmlValidCtxt</a>,
+    pub instate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub token: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub directory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i8.html">i8</a>,
+    pub name: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub nameNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nameMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nameTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub nbChars: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a>,
+    pub checkIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a>,
+    pub keepBlanks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub disableSAX: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub inSubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub intSubName: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub extSubURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub extSubSystem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub space: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub spaceNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub spaceMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub spaceTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub depth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub entity: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a>,
+    pub charset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodelen: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodemem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub pedantic: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub _private: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a>,
+    pub loadsubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub linenumbers: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub catalogs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a>,
+    pub recovery: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub progressive: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub dict: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlDict.html" title="struct libxslt::bindings::_xmlDict">_xmlDict</a>,
+    pub atts: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub maxatts: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub docdict: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub str_xml: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub str_xmlns: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub str_xml_ns: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub sax2: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nsMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nsTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+    pub attallocs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub pushTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a>,
+    pub attsDefault: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlHashTable.html" title="struct libxslt::bindings::_xmlHashTable">_xmlHashTable</a>,
+    pub attsSpecial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlHashTable.html" title="struct libxslt::bindings::_xmlHashTable">_xmlHashTable</a>,
+    pub nsWellFormed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub options: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub dictNames: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub freeElemsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub freeElems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a>,
+    pub freeAttrsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub freeAttrs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlAttr.html" title="struct libxslt::bindings::_xmlAttr">_xmlAttr</a>,
+    pub lastError: <a class="struct" href="../../libxslt/bindings/struct._xmlError.html" title="struct libxslt::bindings::_xmlError">_xmlError</a>,
+    pub parseMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
+    pub nbentities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>,
+    pub sizeentities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>,
+    pub nodeInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfo.html" title="struct libxslt::bindings::_xmlParserNodeInfo">_xmlParserNodeInfo</a>,
+    pub nodeInfoNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodeInfoMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub nodeInfoTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfo.html" title="struct libxslt::bindings::_xmlParserNodeInfo">_xmlParserNodeInfo</a>,
+    pub input_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub sizeentcopy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>,
+}</pre></div><div class='docblock'><p>xmlParserCtxt:</p>
+<p>The parser context.
+NOTE This doesn't completely define the parser state, the (current ?)
+design of the parser uses recursive function calls since this allow
+and easy mapping from the production rules of the specification
+to the actual code. The drawback is that the actual function call
+also reflect the parser state. However most of the parsing routines
+takes as the only argument the parser context pointer, so migrating
+to a state based parser for progressive parsing shouldn't be too hard.</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.sax" class="structfield small-section-header">
+                           <a href="#structfield.sax" class="anchor field"></a>
+                           <span id="sax.v" class='invisible'>
+                           <code>sax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlSAXHandler.html" title="struct libxslt::bindings::_xmlSAXHandler">_xmlSAXHandler</a></code>
+                           </span></span><span id="structfield.userData" class="structfield small-section-header">
+                           <a href="#structfield.userData" class="anchor field"></a>
+                           <span id="userData.v" class='invisible'>
+                           <code>userData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a></code>
+                           </span></span><span id="structfield.myDoc" class="structfield small-section-header">
+                           <a href="#structfield.myDoc" class="anchor field"></a>
+                           <span id="myDoc.v" class='invisible'>
+                           <code>myDoc: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlDoc.html" title="struct libxslt::bindings::_xmlDoc">_xmlDoc</a></code>
+                           </span></span><span id="structfield.wellFormed" class="structfield small-section-header">
+                           <a href="#structfield.wellFormed" class="anchor field"></a>
+                           <span id="wellFormed.v" class='invisible'>
+                           <code>wellFormed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.replaceEntities" class="structfield small-section-header">
+                           <a href="#structfield.replaceEntities" class="anchor field"></a>
+                           <span id="replaceEntities.v" class='invisible'>
+                           <code>replaceEntities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.version" class="structfield small-section-header">
+                           <a href="#structfield.version" class="anchor field"></a>
+                           <span id="version.v" class='invisible'>
+                           <code>version: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.encoding" class="structfield small-section-header">
+                           <a href="#structfield.encoding" class="anchor field"></a>
+                           <span id="encoding.v" class='invisible'>
+                           <code>encoding: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.standalone" class="structfield small-section-header">
+                           <a href="#structfield.standalone" class="anchor field"></a>
+                           <span id="standalone.v" class='invisible'>
+                           <code>standalone: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.html" class="structfield small-section-header">
+                           <a href="#structfield.html" class="anchor field"></a>
+                           <span id="html.v" class='invisible'>
+                           <code>html: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.input" class="structfield small-section-header">
+                           <a href="#structfield.input" class="anchor field"></a>
+                           <span id="input.v" class='invisible'>
+                           <code>input: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a></code>
+                           </span></span><span id="structfield.inputNr" class="structfield small-section-header">
+                           <a href="#structfield.inputNr" class="anchor field"></a>
+                           <span id="inputNr.v" class='invisible'>
+                           <code>inputNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.inputMax" class="structfield small-section-header">
+                           <a href="#structfield.inputMax" class="anchor field"></a>
+                           <span id="inputMax.v" class='invisible'>
+                           <code>inputMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.inputTab" class="structfield small-section-header">
+                           <a href="#structfield.inputTab" class="anchor field"></a>
+                           <span id="inputTab.v" class='invisible'>
+                           <code>inputTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a></code>
+                           </span></span><span id="structfield.node" class="structfield small-section-header">
+                           <a href="#structfield.node" class="anchor field"></a>
+                           <span id="node.v" class='invisible'>
+                           <code>node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a></code>
+                           </span></span><span id="structfield.nodeNr" class="structfield small-section-header">
+                           <a href="#structfield.nodeNr" class="anchor field"></a>
+                           <span id="nodeNr.v" class='invisible'>
+                           <code>nodeNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodeMax" class="structfield small-section-header">
+                           <a href="#structfield.nodeMax" class="anchor field"></a>
+                           <span id="nodeMax.v" class='invisible'>
+                           <code>nodeMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodeTab" class="structfield small-section-header">
+                           <a href="#structfield.nodeTab" class="anchor field"></a>
+                           <span id="nodeTab.v" class='invisible'>
+                           <code>nodeTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a></code>
+                           </span></span><span id="structfield.record_info" class="structfield small-section-header">
+                           <a href="#structfield.record_info" class="anchor field"></a>
+                           <span id="record_info.v" class='invisible'>
+                           <code>record_info: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.node_seq" class="structfield small-section-header">
+                           <a href="#structfield.node_seq" class="anchor field"></a>
+                           <span id="node_seq.v" class='invisible'>
+                           <code>node_seq: <a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfoSeq.html" title="struct libxslt::bindings::_xmlParserNodeInfoSeq">_xmlParserNodeInfoSeq</a></code>
+                           </span></span><span id="structfield.errNo" class="structfield small-section-header">
+                           <a href="#structfield.errNo" class="anchor field"></a>
+                           <span id="errNo.v" class='invisible'>
+                           <code>errNo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.hasExternalSubset" class="structfield small-section-header">
+                           <a href="#structfield.hasExternalSubset" class="anchor field"></a>
+                           <span id="hasExternalSubset.v" class='invisible'>
+                           <code>hasExternalSubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.hasPErefs" class="structfield small-section-header">
+                           <a href="#structfield.hasPErefs" class="anchor field"></a>
+                           <span id="hasPErefs.v" class='invisible'>
+                           <code>hasPErefs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.external" class="structfield small-section-header">
+                           <a href="#structfield.external" class="anchor field"></a>
+                           <span id="external.v" class='invisible'>
+                           <code>external: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.valid" class="structfield small-section-header">
+                           <a href="#structfield.valid" class="anchor field"></a>
+                           <span id="valid.v" class='invisible'>
+                           <code>valid: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.validate" class="structfield small-section-header">
+                           <a href="#structfield.validate" class="anchor field"></a>
+                           <span id="validate.v" class='invisible'>
+                           <code>validate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.vctxt" class="structfield small-section-header">
+                           <a href="#structfield.vctxt" class="anchor field"></a>
+                           <span id="vctxt.v" class='invisible'>
+                           <code>vctxt: <a class="struct" href="../../libxslt/bindings/struct._xmlValidCtxt.html" title="struct libxslt::bindings::_xmlValidCtxt">_xmlValidCtxt</a></code>
+                           </span></span><span id="structfield.instate" class="structfield small-section-header">
+                           <a href="#structfield.instate" class="anchor field"></a>
+                           <span id="instate.v" class='invisible'>
+                           <code>instate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.token" class="structfield small-section-header">
+                           <a href="#structfield.token" class="anchor field"></a>
+                           <span id="token.v" class='invisible'>
+                           <code>token: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.directory" class="structfield small-section-header">
+                           <a href="#structfield.directory" class="anchor field"></a>
+                           <span id="directory.v" class='invisible'>
+                           <code>directory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i8.html">i8</a></code>
+                           </span></span><span id="structfield.name" class="structfield small-section-header">
+                           <a href="#structfield.name" class="anchor field"></a>
+                           <span id="name.v" class='invisible'>
+                           <code>name: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.nameNr" class="structfield small-section-header">
+                           <a href="#structfield.nameNr" class="anchor field"></a>
+                           <span id="nameNr.v" class='invisible'>
+                           <code>nameNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nameMax" class="structfield small-section-header">
+                           <a href="#structfield.nameMax" class="anchor field"></a>
+                           <span id="nameMax.v" class='invisible'>
+                           <code>nameMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nameTab" class="structfield small-section-header">
+                           <a href="#structfield.nameTab" class="anchor field"></a>
+                           <span id="nameTab.v" class='invisible'>
+                           <code>nameTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.nbChars" class="structfield small-section-header">
+                           <a href="#structfield.nbChars" class="anchor field"></a>
+                           <span id="nbChars.v" class='invisible'>
+                           <code>nbChars: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code>
+                           </span></span><span id="structfield.checkIndex" class="structfield small-section-header">
+                           <a href="#structfield.checkIndex" class="anchor field"></a>
+                           <span id="checkIndex.v" class='invisible'>
+                           <code>checkIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code>
+                           </span></span><span id="structfield.keepBlanks" class="structfield small-section-header">
+                           <a href="#structfield.keepBlanks" class="anchor field"></a>
+                           <span id="keepBlanks.v" class='invisible'>
+                           <code>keepBlanks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.disableSAX" class="structfield small-section-header">
+                           <a href="#structfield.disableSAX" class="anchor field"></a>
+                           <span id="disableSAX.v" class='invisible'>
+                           <code>disableSAX: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.inSubset" class="structfield small-section-header">
+                           <a href="#structfield.inSubset" class="anchor field"></a>
+                           <span id="inSubset.v" class='invisible'>
+                           <code>inSubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.intSubName" class="structfield small-section-header">
+                           <a href="#structfield.intSubName" class="anchor field"></a>
+                           <span id="intSubName.v" class='invisible'>
+                           <code>intSubName: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.extSubURI" class="structfield small-section-header">
+                           <a href="#structfield.extSubURI" class="anchor field"></a>
+                           <span id="extSubURI.v" class='invisible'>
+                           <code>extSubURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.extSubSystem" class="structfield small-section-header">
+                           <a href="#structfield.extSubSystem" class="anchor field"></a>
+                           <span id="extSubSystem.v" class='invisible'>
+                           <code>extSubSystem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.space" class="structfield small-section-header">
+                           <a href="#structfield.space" class="anchor field"></a>
+                           <span id="space.v" class='invisible'>
+                           <code>space: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.spaceNr" class="structfield small-section-header">
+                           <a href="#structfield.spaceNr" class="anchor field"></a>
+                           <span id="spaceNr.v" class='invisible'>
+                           <code>spaceNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.spaceMax" class="structfield small-section-header">
+                           <a href="#structfield.spaceMax" class="anchor field"></a>
+                           <span id="spaceMax.v" class='invisible'>
+                           <code>spaceMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.spaceTab" class="structfield small-section-header">
+                           <a href="#structfield.spaceTab" class="anchor field"></a>
+                           <span id="spaceTab.v" class='invisible'>
+                           <code>spaceTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.depth" class="structfield small-section-header">
+                           <a href="#structfield.depth" class="anchor field"></a>
+                           <span id="depth.v" class='invisible'>
+                           <code>depth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.entity" class="structfield small-section-header">
+                           <a href="#structfield.entity" class="anchor field"></a>
+                           <span id="entity.v" class='invisible'>
+                           <code>entity: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserInput.html" title="struct libxslt::bindings::_xmlParserInput">_xmlParserInput</a></code>
+                           </span></span><span id="structfield.charset" class="structfield small-section-header">
+                           <a href="#structfield.charset" class="anchor field"></a>
+                           <span id="charset.v" class='invisible'>
+                           <code>charset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodelen" class="structfield small-section-header">
+                           <a href="#structfield.nodelen" class="anchor field"></a>
+                           <span id="nodelen.v" class='invisible'>
+                           <code>nodelen: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodemem" class="structfield small-section-header">
+                           <a href="#structfield.nodemem" class="anchor field"></a>
+                           <span id="nodemem.v" class='invisible'>
+                           <code>nodemem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.pedantic" class="structfield small-section-header">
+                           <a href="#structfield.pedantic" class="anchor field"></a>
+                           <span id="pedantic.v" class='invisible'>
+                           <code>pedantic: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield._private" class="structfield small-section-header">
+                           <a href="#structfield._private" class="anchor field"></a>
+                           <span id="_private.v" class='invisible'>
+                           <code>_private: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a></code>
+                           </span></span><span id="structfield.loadsubset" class="structfield small-section-header">
+                           <a href="#structfield.loadsubset" class="anchor field"></a>
+                           <span id="loadsubset.v" class='invisible'>
+                           <code>loadsubset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.linenumbers" class="structfield small-section-header">
+                           <a href="#structfield.linenumbers" class="anchor field"></a>
+                           <span id="linenumbers.v" class='invisible'>
+                           <code>linenumbers: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.catalogs" class="structfield small-section-header">
+                           <a href="#structfield.catalogs" class="anchor field"></a>
+                           <span id="catalogs.v" class='invisible'>
+                           <code>catalogs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a></code>
+                           </span></span><span id="structfield.recovery" class="structfield small-section-header">
+                           <a href="#structfield.recovery" class="anchor field"></a>
+                           <span id="recovery.v" class='invisible'>
+                           <code>recovery: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.progressive" class="structfield small-section-header">
+                           <a href="#structfield.progressive" class="anchor field"></a>
+                           <span id="progressive.v" class='invisible'>
+                           <code>progressive: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.dict" class="structfield small-section-header">
+                           <a href="#structfield.dict" class="anchor field"></a>
+                           <span id="dict.v" class='invisible'>
+                           <code>dict: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlDict.html" title="struct libxslt::bindings::_xmlDict">_xmlDict</a></code>
+                           </span></span><span id="structfield.atts" class="structfield small-section-header">
+                           <a href="#structfield.atts" class="anchor field"></a>
+                           <span id="atts.v" class='invisible'>
+                           <code>atts: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.maxatts" class="structfield small-section-header">
+                           <a href="#structfield.maxatts" class="anchor field"></a>
+                           <span id="maxatts.v" class='invisible'>
+                           <code>maxatts: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.docdict" class="structfield small-section-header">
+                           <a href="#structfield.docdict" class="anchor field"></a>
+                           <span id="docdict.v" class='invisible'>
+                           <code>docdict: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.str_xml" class="structfield small-section-header">
+                           <a href="#structfield.str_xml" class="anchor field"></a>
+                           <span id="str_xml.v" class='invisible'>
+                           <code>str_xml: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.str_xmlns" class="structfield small-section-header">
+                           <a href="#structfield.str_xmlns" class="anchor field"></a>
+                           <span id="str_xmlns.v" class='invisible'>
+                           <code>str_xmlns: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.str_xml_ns" class="structfield small-section-header">
+                           <a href="#structfield.str_xml_ns" class="anchor field"></a>
+                           <span id="str_xml_ns.v" class='invisible'>
+                           <code>str_xml_ns: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.sax2" class="structfield small-section-header">
+                           <a href="#structfield.sax2" class="anchor field"></a>
+                           <span id="sax2.v" class='invisible'>
+                           <code>sax2: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nsNr" class="structfield small-section-header">
+                           <a href="#structfield.nsNr" class="anchor field"></a>
+                           <span id="nsNr.v" class='invisible'>
+                           <code>nsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nsMax" class="structfield small-section-header">
+                           <a href="#structfield.nsMax" class="anchor field"></a>
+                           <span id="nsMax.v" class='invisible'>
+                           <code>nsMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nsTab" class="structfield small-section-header">
+                           <a href="#structfield.nsTab" class="anchor field"></a>
+                           <span id="nsTab.v" class='invisible'>
+                           <code>nsTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><span id="structfield.attallocs" class="structfield small-section-header">
+                           <a href="#structfield.attallocs" class="anchor field"></a>
+                           <span id="attallocs.v" class='invisible'>
+                           <code>attallocs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.pushTab" class="structfield small-section-header">
+                           <a href="#structfield.pushTab" class="anchor field"></a>
+                           <span id="pushTab.v" class='invisible'>
+                           <code>pushTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html" title="enum core::ffi::c_void">c_void</a></code>
+                           </span></span><span id="structfield.attsDefault" class="structfield small-section-header">
+                           <a href="#structfield.attsDefault" class="anchor field"></a>
+                           <span id="attsDefault.v" class='invisible'>
+                           <code>attsDefault: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlHashTable.html" title="struct libxslt::bindings::_xmlHashTable">_xmlHashTable</a></code>
+                           </span></span><span id="structfield.attsSpecial" class="structfield small-section-header">
+                           <a href="#structfield.attsSpecial" class="anchor field"></a>
+                           <span id="attsSpecial.v" class='invisible'>
+                           <code>attsSpecial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlHashTable.html" title="struct libxslt::bindings::_xmlHashTable">_xmlHashTable</a></code>
+                           </span></span><span id="structfield.nsWellFormed" class="structfield small-section-header">
+                           <a href="#structfield.nsWellFormed" class="anchor field"></a>
+                           <span id="nsWellFormed.v" class='invisible'>
+                           <code>nsWellFormed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.options" class="structfield small-section-header">
+                           <a href="#structfield.options" class="anchor field"></a>
+                           <span id="options.v" class='invisible'>
+                           <code>options: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.dictNames" class="structfield small-section-header">
+                           <a href="#structfield.dictNames" class="anchor field"></a>
+                           <span id="dictNames.v" class='invisible'>
+                           <code>dictNames: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.freeElemsNr" class="structfield small-section-header">
+                           <a href="#structfield.freeElemsNr" class="anchor field"></a>
+                           <span id="freeElemsNr.v" class='invisible'>
+                           <code>freeElemsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.freeElems" class="structfield small-section-header">
+                           <a href="#structfield.freeElems" class="anchor field"></a>
+                           <span id="freeElems.v" class='invisible'>
+                           <code>freeElems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlNode.html" title="struct libxslt::bindings::_xmlNode">_xmlNode</a></code>
+                           </span></span><span id="structfield.freeAttrsNr" class="structfield small-section-header">
+                           <a href="#structfield.freeAttrsNr" class="anchor field"></a>
+                           <span id="freeAttrsNr.v" class='invisible'>
+                           <code>freeAttrsNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.freeAttrs" class="structfield small-section-header">
+                           <a href="#structfield.freeAttrs" class="anchor field"></a>
+                           <span id="freeAttrs.v" class='invisible'>
+                           <code>freeAttrs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlAttr.html" title="struct libxslt::bindings::_xmlAttr">_xmlAttr</a></code>
+                           </span></span><span id="structfield.lastError" class="structfield small-section-header">
+                           <a href="#structfield.lastError" class="anchor field"></a>
+                           <span id="lastError.v" class='invisible'>
+                           <code>lastError: <a class="struct" href="../../libxslt/bindings/struct._xmlError.html" title="struct libxslt::bindings::_xmlError">_xmlError</a></code>
+                           </span></span><span id="structfield.parseMode" class="structfield small-section-header">
+                           <a href="#structfield.parseMode" class="anchor field"></a>
+                           <span id="parseMode.v" class='invisible'>
+                           <code>parseMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code>
+                           </span></span><span id="structfield.nbentities" class="structfield small-section-header">
+                           <a href="#structfield.nbentities" class="anchor field"></a>
+                           <span id="nbentities.v" class='invisible'>
+                           <code>nbentities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a></code>
+                           </span></span><span id="structfield.sizeentities" class="structfield small-section-header">
+                           <a href="#structfield.sizeentities" class="anchor field"></a>
+                           <span id="sizeentities.v" class='invisible'>
+                           <code>sizeentities: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a></code>
+                           </span></span><span id="structfield.nodeInfo" class="structfield small-section-header">
+                           <a href="#structfield.nodeInfo" class="anchor field"></a>
+                           <span id="nodeInfo.v" class='invisible'>
+                           <code>nodeInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfo.html" title="struct libxslt::bindings::_xmlParserNodeInfo">_xmlParserNodeInfo</a></code>
+                           </span></span><span id="structfield.nodeInfoNr" class="structfield small-section-header">
+                           <a href="#structfield.nodeInfoNr" class="anchor field"></a>
+                           <span id="nodeInfoNr.v" class='invisible'>
+                           <code>nodeInfoNr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodeInfoMax" class="structfield small-section-header">
+                           <a href="#structfield.nodeInfoMax" class="anchor field"></a>
+                           <span id="nodeInfoMax.v" class='invisible'>
+                           <code>nodeInfoMax: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.nodeInfoTab" class="structfield small-section-header">
+                           <a href="#structfield.nodeInfoTab" class="anchor field"></a>
+                           <span id="nodeInfoTab.v" class='invisible'>
+                           <code>nodeInfoTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../libxslt/bindings/struct._xmlParserNodeInfo.html" title="struct libxslt::bindings::_xmlParserNodeInfo">_xmlParserNodeInfo</a></code>
+                           </span></span><span id="structfield.input_id" class="structfield small-section-header">
+                           <a href="#structfield.input_id" class="anchor field"></a>
+                           <span id="input_id.v" class='invisible'>
+                           <code>input_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><span id="structfield.sizeentcopy" class="structfield small-section-header">
+                           <a href="#structfield.sizeentcopy" class="anchor field"></a>
+                           <span id="sizeentcopy.v" class='invisible'>
+                           <code>sizeentcopy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a></code>
+                           </span></span><h2 id='implementations' class='small-section-header'>Trait Implementations<a href='#implementations' class='anchor'></a></h2><div id='implementations-list'><h3 id='impl-Clone' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code><a href='#impl-Clone' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/libxml/bindings.rs.html#7660' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/libxml/bindings.rs.html#7660' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span></td><td><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#130-132' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id='impl-Copy' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> for <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code><a href='#impl-Copy' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/libxml/bindings.rs.html#7660' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Debug' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code><a href='#impl-Debug' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/libxml/bindings.rs.html#7660' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html" title="struct core::fmt::Error">Error</a>&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/libxml/bindings.rs.html#7660' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
+</div></div></div><h2 id='synthetic-implementations' class='small-section-header'>Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a></h2><div id='synthetic-implementations-list'><h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../libxslt/bindings/struct._xmlParserCtxt.html" title="struct libxslt::bindings::_xmlParserCtxt">_xmlParserCtxt</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div><h2 id='blanket-implementations' class='small-section-header'>Blanket Implementations<a href='#blanket-implementations' class='anchor'></a></h2><div id='blanket-implementations-list'><h3 id='impl-From' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a> for T</code><a href='#impl-From' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#462-464' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(t: T) -&gt; T</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#463' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Into' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;T&gt;,&nbsp;</span></code><a href='#impl-Into' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#453-458' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.into' class="method"><span id='into.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; U</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#455-457' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-ToOwned' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html" title="trait alloc::borrow::ToOwned">ToOwned</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a>,&nbsp;</span></code><a href='#impl-ToOwned' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#90-101' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='associatedtype.Owned' class="type"><span id='Owned.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#associatedtype.Owned' class="type">Owned</a> = T</code></span></h4>
+<h4 id='method.to_owned' class="method"><span id='to_owned.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#tymethod.to_owned' class='fnname'>to_owned</a>(&amp;self) -&gt; T</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#94-96' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Creates owned data from borrowed data, usually by cloning. <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#tymethod.to_owned">Read more</a></p>
+</div><h4 id='method.clone_into' class="method"><span id='clone_into.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#method.clone_into' class='fnname'>clone_into</a>(&amp;self, target: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T)</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#98-100' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='stability'><div class='stab unstable'><details><summary><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>toowned_clone_into</code>)</summary><p>recently added</p>
+</details></div></div><div class='docblock'><p>Uses borrowed data to replace owned data, usually by cloning. <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#method.clone_into">Read more</a></p>
+</div></div><h3 id='impl-TryFrom' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;U&gt;,&nbsp;</span></code><a href='#impl-TryFrom' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#481-487' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='associatedtype.Error' class="type"><span id='Error.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error' class="type">Error</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.never.html">!</a></code></span></h4>
+<div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>try_from</code>)</div></div><div class='docblock'><p>The type returned in the event of a conversion error.</p>
+</div><h4 id='method.try_from' class="method"><span id='try_from.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#tymethod.try_from' class='fnname'>try_from</a>(value: U) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;T, &lt;T as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;U&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a>&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#484-486' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>try_from</code>)</div></div><div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Borrow' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html" title="trait core::borrow::Borrow">Borrow</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href='#impl-Borrow' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#219-221' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.borrow' class="method"><span id='borrow.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html#tymethod.borrow' class='fnname'>borrow</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#220' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Immutably borrows from an owned value. <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html#tymethod.borrow">Read more</a></p>
+</div></div><h3 id='impl-BorrowMut' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html" title="trait core::borrow::BorrowMut">BorrowMut</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href='#impl-BorrowMut' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#224-226' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.borrow_mut' class="method"><span id='borrow_mut.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut' class='fnname'>borrow_mut</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#225' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Mutably borrows from an owned value. <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut">Read more</a></p>
+</div></div><h3 id='impl-TryInto' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html" title="trait core::convert::TryInto">TryInto</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;,&nbsp;</span></code><a href='#impl-TryInto' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#469-476' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='associatedtype.Error-1' class="type"><span id='Error.t-1' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html#associatedtype.Error' class="type">Error</a> = &lt;U as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a></code></span></h4>
+<div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>try_from</code>)</div></div><div class='docblock'><p>The type returned in the event of a conversion error.</p>
+</div><h4 id='method.try_into' class="method"><span id='try_into.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html#tymethod.try_into' class='fnname'>try_into</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;U, &lt;U as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a>&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/convert.rs.html#473-475' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>try_from</code>)</div></div><div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Any' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: 'static + ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href='#impl-Any' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/any.rs.html#114-116' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.get_type_id' class="method"><span id='get_type_id.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='https://doc.rust-lang.org/nightly/core/any/trait.Any.html#tymethod.get_type_id' class='fnname'>get_type_id</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/core/any/struct.TypeId.html" title="struct core::any::TypeId">TypeId</a></code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/any.rs.html#115' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='stability'><div class='stab unstable'><details><summary><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>get_type_id</code>)</summary><p>this method will likely be replaced by an associated static</p>
+</details></div></div><div class='docblock'><p>Gets the <code>TypeId</code> of <code>self</code>. <a href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html#tymethod.get_type_id">Read more</a></p>
+</div></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "libxslt";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>
