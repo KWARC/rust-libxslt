@@ -29,7 +29,7 @@ impl Stylesheet {
   }
 
   /// Transforms a libxml `Document` per the current stylesheet
-  pub fn transform(&mut self, doc: &Document) -> Result<Document, Box<Error>> {
+  pub fn transform(&mut self, doc: &Document) -> Result<Document, Box<dyn Error>> {
     let ctxt = self.build_context(doc)?;
 
     // ctxt.xinclude = 1;

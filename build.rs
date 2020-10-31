@@ -2,9 +2,7 @@ extern crate pkg_config;
 use pkg_config::find_library;
 
 fn main() {
-  if find_library("libxslt").is_ok() {
-    return;
-  } else {
+  if find_library("libxslt").is_err() {
     panic!("Could not find libxslt using pkg-config");
   }
   // // The bindgen::Builder is the main entry point
