@@ -16,7 +16,7 @@ exclude = [
 
 [dependencies]
 libc = "0.2"
-libxml = "0.2.6"
+libxml = "0.2.16"
 
 [build-dependencies]
 pkg-config = "0.3.2"
