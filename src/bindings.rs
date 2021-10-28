@@ -3252,9 +3252,6 @@ extern "C" {
   pub fn xsltParseStylesheetFile(filename: *const xmlChar) -> xsltStylesheetPtr;
 }
 extern "C" {
-  pub fn xsltParseStylesheetDoc(doc: xmlDocPtr) -> xsltStylesheetPtr;
-}
-extern "C" {
   pub fn xsltFreeStylesheet(style: xsltStylesheetPtr);
 }
 extern "C" {
@@ -3276,7 +3273,7 @@ extern "C" {
   pub fn xsltParseStylesheetOutput(style: xsltStylesheetPtr, cur: xmlNodePtr);
 }
 extern "C" {
-  pub fn  oc(doc: xmlDocPtr) -> xsltStylesheetPtr;
+  pub fn xsltParseStylesheetDoc(doc: xmlDocPtr) -> xsltStylesheetPtr;
 }
 extern "C" {
   pub fn xsltParseStylesheetImportedDoc(
