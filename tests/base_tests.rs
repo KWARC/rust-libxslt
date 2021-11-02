@@ -34,8 +34,8 @@ fn hello_builder() {
     let source_len = source.to_string().len();
     assert!(source_len > 1000);
 
-    let new_doc_result = stylesheet.transform(&source);
-    let new_doc_from_string_result = stylesheet_from_string.transform(&source);
+    let new_doc_result = stylesheet.transform(&source, vec![("yearfrom", "1234")]);
+    let new_doc_from_string_result = stylesheet_from_string.transform(&source, vec![("yearfrom", "1234")]);
     assert!(new_doc_result.is_ok());
     assert!(new_doc_from_string_result.is_ok());
     let new_doc: Document = new_doc_result.unwrap();
@@ -49,6 +49,9 @@ fn hello_builder() {
         ..SaveOptions::default()
     });
     let new_len = new_serialized.len();
+
+    std::fs::write("result.xsl", new_serialized).unwrap();
+
     assert!(new_len > 1500);
     // This particular example converts an XML document into an HTML one with a custom header, which happens to be ~600 chars longer
     assert!(new_len > source_len);
