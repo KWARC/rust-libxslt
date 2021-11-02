@@ -1,4 +1,6 @@
 use std::error::Error;
+use std::ffi::CString;
+use std::iter::once;
 use std::ptr;
 
 use crate::bindings::*;
@@ -29,7 +31,7 @@ impl Stylesheet {
   }
 
   /// Transforms a libxml `Document` per the current stylesheet
-  pub fn transform(&mut self, doc: &Document) -> Result<Document, Box<dyn Error>> {
+  pub fn transform(&mut self, doc: &Document, params: Vec<(&str, &str)>) -> Result<Document, Box<dyn Error>> {
     let ctxt = self.build_context(doc)?;
 
     // ctxt.xinclude = 1;
@@ -37,13 +39,28 @@ impl Stylesheet {
     // LibXSLT_init_security_prefs(ctxt);
     // LibXSLT_init_functions(ctxt, wrapper);
     // LibXSLT_init_elements(ctxt, wrapper);
-    let xslt_params = ptr::null_mut();
+    // let xslt_params = ptr::null_mut();
+
+    let params_cstrings_result: Result<Vec<CString>, _> = params.iter()
+      .flat_map(|pair| once(pair.0).chain(once(pair.1)))
+      .map(CString::new)
+      .collect();
+
+    let params_cstrings = params_cstrings_result?;
+
+    let mut params_cstrings_pointers: Vec<*const i8> =  params_cstrings.iter()
+        .map(|cstr| cstr.as_ptr())
+        .collect();
+
+    params_cstrings_pointers.push(std::ptr::null());
+
+    let params_ptr = params_cstrings_pointers.as_mut_ptr();
 
     let real_dom = unsafe {
       xsltApplyStylesheetUser(
         self.ptr_mut(),
         doc.doc_ptr(),
-        xslt_params,
+        params_ptr,
         ptr::null_mut(),
         ptr::null_mut(),
         ctxt.ptr,
