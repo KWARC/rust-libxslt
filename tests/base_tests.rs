@@ -50,8 +50,6 @@ fn hello_builder() {
     });
     let new_len = new_serialized.len();
 
-    std::fs::write("result.xsl", new_serialized).unwrap();
-
     assert!(new_len > 1500);
     // This particular example converts an XML document into an HTML one with a custom header, which happens to be ~600 chars longer
     assert!(new_len > source_len);

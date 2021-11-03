@@ -39,7 +39,6 @@ impl Stylesheet {
     // LibXSLT_init_security_prefs(ctxt);
     // LibXSLT_init_functions(ctxt, wrapper);
     // LibXSLT_init_elements(ctxt, wrapper);
-    // let xslt_params = ptr::null_mut();
 
     let params_cstrings_result: Result<Vec<CString>, _> = params.iter()
       .flat_map(|pair| once(pair.0).chain(once(pair.1)))
@@ -52,6 +51,7 @@ impl Stylesheet {
         .map(|cstr| cstr.as_ptr())
         .collect();
 
+    // Params array has to be null terminated
     params_cstrings_pointers.push(std::ptr::null());
 
     let params_ptr = params_cstrings_pointers.as_mut_ptr();
@@ -66,6 +66,7 @@ impl Stylesheet {
         ctxt.ptr,
       )
     };
+
     // if (doc->intSubset != NULL &&
     //     doc->prev == NULL && doc->next == NULL) {
     //    xmlNodePtr cur = (xmlNodePtr) doc->intSubset;
