@@ -1,8 +1,8 @@
 [package]
 name = "libxslt"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
-authors = ["Deyan Ginev <d.ginev@jacobs-university.de>"]
+authors = ["Deyan Ginev <deyan.ginev@gmail.com>"]
 description = "A Rust wrapper for libxslt - The XSLT C library for GNOME"
 repository = "https://github.com/KWARC/rust-libxslt"
 documentation = "http://kwarc.github.io/rust-libxslt/libxslt/index.html"
