@@ -27,11 +27,11 @@ pub fn parse_file(path_str: &str) -> Result<Stylesheet, String> {
   }
 }
 
-/// Load an XSLT stylesheet from string UTF-8 in byte format
-pub fn parse_string(file_string: Vec<u8>, url: &str) -> Result<Stylesheet, String> {
+/// Load an XSLT stylesheet from UTF-8 string in byte format
+pub fn parse_bytes(file_string_as_bytes: Vec<u8>, url: &str) -> Result<Stylesheet, String> {
     unsafe {
-      let xsl_file_string_len = file_string.len() as i32;
-      let xsl_file_c_str = CString::new(file_string).unwrap();
+      let xsl_file_string_len = file_string_as_bytes.len() as i32;
+      let xsl_file_c_str = CString::new(file_string_as_bytes).unwrap();
       let url_c_str = CString::new(url).unwrap();
 
       let bytes = xsl_file_c_str.as_bytes_with_nul();
