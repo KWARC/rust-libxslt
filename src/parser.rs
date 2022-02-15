@@ -36,13 +36,13 @@ pub fn parse_bytes(file_string_as_bytes: Vec<u8>, url: &str) -> Result<Styleshee
 
         let bytes = xsl_file_c_str.as_bytes_with_nul();
         let ptr = bytes.as_ptr();
-        let file = ptr as *const i8;
+        let file = ptr as *const libc::c_char;
 
         let bytes = url_c_str.as_bytes_with_nul();
         let ptr = bytes.as_ptr();
-        let url = ptr as *const i8;
+        let url = ptr as *const libc::c_char;
 
-        let xml = xmlReadMemory(file, xsl_file_string_len, url, std::ptr::null::<i8>(), 0);
+        let xml = xmlReadMemory(file, xsl_file_string_len, url, std::ptr::null::<libc::c_char>(), 0);
 
         let ptr = xsltParseStylesheetDoc(xml);
 

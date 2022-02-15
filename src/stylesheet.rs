@@ -47,7 +47,7 @@ impl Stylesheet {
 
     let params_cstrings = params_cstrings_result?;
 
-    let mut params_cstrings_pointers: Vec<*const i8> =  params_cstrings.iter()
+    let mut params_cstrings_pointers: Vec<*const libc::c_char> =  params_cstrings.iter()
         .map(|cstr| cstr.as_ptr())
         .collect();
 
