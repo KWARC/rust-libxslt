@@ -5,6 +5,14 @@ fn main() {
   if find_library("libxslt").is_err() {
     panic!("Could not find libxslt using pkg-config");
   }
+  // libexslt provides the str:*, math:*, set:*, date:* extension functions
+  // used by many stylesheets. We need to link it so `exsltRegisterAll` is
+  // resolvable. If pkg-config can't find it (e.g. minimal installs), we
+  // fall back to a plain `cargo:rustc-link-lib=dylib=exslt` so systems
+  // with libexslt on the default search path still link.
+  if find_library("libexslt").is_err() {
+    println!("cargo:rustc-link-lib=dylib=exslt");
+  }
   // // The bindgen::Builder is the main entry point
   // // to bindgen, and lets you build up options for
   // // the resulting bindings.

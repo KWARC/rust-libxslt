@@ -5106,6 +5106,15 @@ extern "C" {
 extern "C" {
     pub fn xslDropCall();
 }
+
+// EXSLT extensions — str:*, math:*, set:*, date:*. Needed for the
+// LaTeXML stylesheets that use `str:tokenize`, `math:*`, etc. The
+// function links against libexslt (see build.rs); it must be called
+// before any xsltApplyStylesheet invocation. Safe to call more than
+// once — libexslt guards against re-registration internally.
+extern "C" {
+    pub fn exsltRegisterAll();
+}
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
