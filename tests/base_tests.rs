@@ -26,7 +26,7 @@ fn hello_builder() {
     let source_len = source.to_string().len();
     assert!(source_len > 1000);
 
-    let new_doc_result = stylesheet.transform(&source, Vec::new());
+    let new_doc_result = stylesheet.transform(source, Vec::new());
     assert!(new_doc_result.is_ok());
     let new_doc: Document = new_doc_result.unwrap();
     let new_serialized = new_doc.to_string_with_options(SaveOptions {
@@ -58,7 +58,7 @@ fn from_string_bytes_builder() {
         ("yearto", "2000")
     ];
 
-    let new_doc_result = stylesheet.transform(&source, xslt_params);
+    let new_doc_result = stylesheet.transform(source, xslt_params);
     assert!(new_doc_result.is_ok());
     let new_doc: Document = new_doc_result.unwrap();
     let new_serialized = new_doc.to_string_with_options(SaveOptions {
@@ -98,7 +98,7 @@ fn exslt_str_tokenize_auto_registers() {
         .expect("parse exslt stylesheet");
 
     let output = stylesheet
-        .transform(&source, Vec::new())
+        .transform(source, Vec::new())
         .expect("transform with str:tokenize")
         .to_string();
 

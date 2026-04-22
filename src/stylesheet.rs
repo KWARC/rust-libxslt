@@ -30,9 +30,16 @@ impl Stylesheet {
     self.ptr
   }
 
-  /// Transforms a libxml `Document` per the current stylesheet
-  pub fn transform(&mut self, doc: &Document, params: Vec<(&str, &str)>) -> Result<Document, Box<dyn Error>> {
-    let ctxt = self.build_context(doc)?;
+  /// Transforms a libxml `Document` per the current stylesheet.
+  ///
+  /// The input `Document` is consumed: libxslt may mutate it while applying
+  /// stylesheet-directed whitespace stripping, so handing out a shared
+  /// reference would be unsound (see issue #6). `doc` is dropped — and the
+  /// underlying `xmlDoc` freed — once the transform returns. If you need
+  /// to transform the same source through several stylesheets, clone the
+  /// `Document` at the call site.
+  pub fn transform(&mut self, doc: Document, params: Vec<(&str, &str)>) -> Result<Document, Box<dyn Error>> {
+    let ctxt = self.build_context(&doc)?;
 
     // ctxt.xinclude = 1;
     // ctxt._private = (void *) wrapper;
