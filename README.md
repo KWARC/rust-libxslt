@@ -7,6 +7,14 @@ Rust wrapper for [libxslt](http://xmlsoft.org/), and a sibling crate to [libxml]
 
 The main goal of this project is to benefit from libxslt's maturity and stability while native Rust XSLT crates mature to be near-drop-in replacements.
 
+## Installation
+
+The crate links against `libxslt` and `libexslt` (for the EXSLT extension functions) via `pkg-config`. Install the development headers before building:
+
+* Debian / Ubuntu: `apt install libxml2-dev libxslt1-dev libexslt-dev`
+* Fedora / RHEL: `dnf install libxml2-devel libxslt-devel` (libexslt ships inside `libxslt-devel`)
+* macOS (Homebrew): `brew install libxml2 libxslt` (bundles libexslt)
+
 **Coverage**: This is an infant proof of concept in both coverage and feature richness, **NOT** ready for production use.
 
 **Welcome!** With these caveats, the contributors to the project are migrating production work towards Rust and find a continuing reliance on libxslt a helpful relief for initial ports. As such, contributions to this crate are welcome, if your workflow is not yet fully supported.

@@ -10,6 +10,7 @@ addons:
     packages:
     - libxml2-dev
     - libxslt1-dev
+    - libexslt-dev
 after_success: "./scripts/doc-upload.sh"
 env:
   global:
