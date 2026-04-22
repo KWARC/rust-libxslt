@@ -69,3 +69,43 @@ fn from_string_bytes_builder() {
     let new_len = new_serialized.len();
     assert!(new_len > 1500);
 }
+
+#[test]
+/// Apply a stylesheet that uses `str:tokenize` (EXSLT) to verify that
+/// parser-triggered auto-registration of libexslt works end-to-end.
+/// Deliberately does *not* call `register_exslt()` manually — if it
+/// did, the test would pass even if auto-registration regressed.
+fn exslt_str_tokenize_auto_registers() {
+    const XSL: &[u8] = br#"<?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:str="http://exslt.org/strings"
+    extension-element-prefixes="str">
+  <xsl:output method="xml" indent="no"/>
+  <xsl:template match="/">
+    <tokens>
+      <xsl:for-each select="str:tokenize('a,b,c,d', ',')">
+        <token><xsl:value-of select="."/></token>
+      </xsl:for-each>
+    </tokens>
+  </xsl:template>
+</xsl:stylesheet>"#;
+
+    let source = XMLParser::default()
+        .parse_string("<root/>")
+        .expect("parse trivial source xml");
+    let mut stylesheet = xslt_parser::parse_bytes(XSL.to_vec(), "exslt_tokenize.xsl")
+        .expect("parse exslt stylesheet");
+
+    let output = stylesheet
+        .transform(&source, Vec::new())
+        .expect("transform with str:tokenize")
+        .to_string();
+
+    for tok in ["<token>a</token>", "<token>b</token>", "<token>c</token>", "<token>d</token>"] {
+        assert!(
+            output.contains(tok),
+            "expected {tok} in EXSLT output, got: {output}"
+        );
+    }
+}

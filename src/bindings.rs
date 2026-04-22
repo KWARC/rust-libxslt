@@ -5107,11 +5107,12 @@ extern "C" {
     pub fn xslDropCall();
 }
 
-// EXSLT extensions — str:*, math:*, set:*, date:*. Needed for the
-// LaTeXML stylesheets that use `str:tokenize`, `math:*`, etc. The
-// function links against libexslt (see build.rs); it must be called
-// before any xsltApplyStylesheet invocation. Safe to call more than
-// once — libexslt guards against re-registration internally.
+// MANUAL EDIT — not produced by bindgen; re-add after regenerating
+// this file. EXSLT extensions — str:*, math:*, set:*, date:*. Needed
+// for stylesheets that use `str:tokenize`, `math:*`, etc. The function
+// links against libexslt (see build.rs); it must be called before any
+// xsltApplyStylesheet invocation. Safe to call more than once —
+// libexslt tolerates re-registration internally.
 extern "C" {
     pub fn exsltRegisterAll();
 }
