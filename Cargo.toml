@@ -10,9 +10,6 @@ readme = "README.md"
 license = "MIT"
 
 build = "build.rs"
-exclude = [
-  "scripts/*"
-]
 
 [dependencies]
 libc = "0.2"

@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/KWARC/rust-libxslt.png?branch=master)](http://travis-ci.org/KWARC/rust-libxslt)
+[![CI](https://github.com/KWARC/rust-libxslt/actions/workflows/ci.yml/badge.svg)](https://github.com/KWARC/rust-libxslt/actions/workflows/ci.yml)
 [![API Documentation](https://img.shields.io/badge/docs-API-blue.svg)](http://KWARC.github.io/rust-libxslt/libxslt/index.html)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/KWARC/rust-libxslt/master/LICENSE)
 [![crates.io](https://img.shields.io/crates/v/libxslt.svg)](https://crates.io/crates/libxslt)
