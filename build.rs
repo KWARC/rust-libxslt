@@ -2,14 +2,15 @@ extern crate pkg_config;
 use pkg_config::find_library;
 
 fn main() {
+  // For both libxslt and libexslt we first ask pkg-config; if that fails
+  // (e.g. minimal installs without the .pc files) we emit a plain
+  // `cargo:rustc-link-lib=dylib=…` so systems with the library on the
+  // default linker search path still link. libexslt provides the str:*,
+  // math:*, set:*, date:* extension functions used by many stylesheets —
+  // it is required so `exsltRegisterAll` is resolvable.
   if find_library("libxslt").is_err() {
-    panic!("Could not find libxslt using pkg-config");
+    println!("cargo:rustc-link-lib=dylib=xslt");
   }
-  // libexslt provides the str:*, math:*, set:*, date:* extension functions
-  // used by many stylesheets. We need to link it so `exsltRegisterAll` is
-  // resolvable. If pkg-config can't find it (e.g. minimal installs), we
-  // fall back to a plain `cargo:rustc-link-lib=dylib=exslt` so systems
-  // with libexslt on the default search path still link.
   if find_library("libexslt").is_err() {
     println!("cargo:rustc-link-lib=dylib=exslt");
   }

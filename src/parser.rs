@@ -3,11 +3,13 @@ use std::path::Path;
 
 use crate::bindings::{xsltParseStylesheetDoc, xsltParseStylesheetFile};
 use crate::libxml::bindings::xmlReadMemory;
+use crate::register_exslt;
 
 use crate::stylesheet::Stylesheet;
 
 /// Load an XSLT stylesheet from (typically `.xsl`) file.
 pub fn parse_file(path_str: &str) -> Result<Stylesheet, String> {
+    register_exslt();
     let path = Path::new(path_str);
     if !path.is_file() {
         Err(format!(
@@ -29,6 +31,7 @@ pub fn parse_file(path_str: &str) -> Result<Stylesheet, String> {
 
 /// Load an XSLT stylesheet from UTF-8 string in byte format
 pub fn parse_bytes(file_string_as_bytes: Vec<u8>, url: &str) -> Result<Stylesheet, String> {
+    register_exslt();
     unsafe {
         let xsl_file_string_len = file_string_as_bytes.len() as i32;
         let xsl_file_c_str = CString::new(file_string_as_bytes).unwrap();
