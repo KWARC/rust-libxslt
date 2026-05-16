@@ -17,3 +17,6 @@ Cargo.lock
 # Test results
 /tests/results/*.xml
 /tags
+
+# Local tooling
+.claude/

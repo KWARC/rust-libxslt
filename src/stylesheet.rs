@@ -6,7 +6,32 @@ use std::ptr;
 use crate::bindings::*;
 use libxml::tree::Document;
 
-/// An XSLT stylesheet object which can `transform` a libxml2 `Document`
+/// An XSLT stylesheet object which can `transform` a libxml2 `Document`.
+///
+/// A `Stylesheet` is a compiled artifact returned by
+/// [`parser::parse_file`] / [`parser::parse_bytes`] and reused for one
+/// or more `transform` calls. Reuse within a single thread is the
+/// documented and well-tested pattern (it is what `xsltproc`'s
+/// `--maxdepth`-style loops do), and skips the cost of
+/// `xsltParseStylesheetFile` on subsequent transforms.
+///
+/// # Thread safety
+///
+/// `Stylesheet` is intentionally **not** `Send` and **not** `Sync`.
+/// libxslt as a whole is not documented as thread-safe, and the
+/// underlying `xsltStylesheetPtr` carries fields (e.g. namespace-prefix
+/// internalisation caches, error contexts) that libxslt may write to
+/// during `xsltApplyStylesheetUser` without external synchronisation.
+/// Until those write paths are audited and either eliminated upstream
+/// or wrapped here, treat a `Stylesheet` as single-threaded.
+///
+/// Callers that need a per-thread reusable stylesheet should park one
+/// in `thread_local!` storage; callers that need to share across
+/// threads should wrap a `Stylesheet` in a `Mutex` and pay the
+/// serialisation cost. We deliberately leave that policy to the caller
+/// rather than baking it into this wrapper — the same caution that
+/// resolved issue #6 (libxslt's hidden mutation of the input
+/// `Document`) applies to the stylesheet object too.
 pub struct Stylesheet {
   pub(crate) ptr: xsltStylesheetPtr,
 }
@@ -31,6 +56,14 @@ impl Stylesheet {
   }
 
   /// Transforms a libxml `Document` per the current stylesheet.
+  ///
+  /// Takes `&mut self` because libxslt's apply path is not documented
+  /// as read-only on the stylesheet: it may write back into the
+  /// stylesheet's internalisation caches or error context fields.
+  /// Sequential reuse from a single thread is sound (and skips the
+  /// per-call parse cost); cross-thread sharing needs an external
+  /// `Mutex`. The mirror of issue #6 applies here — the safe surface
+  /// is the conservative one.
   ///
   /// The input `Document` is consumed: libxslt may mutate it while applying
   /// stylesheet-directed whitespace stripping, so handing out a shared
