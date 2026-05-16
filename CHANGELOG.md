@@ -1,9 +1,7 @@
 # Change Log
 
-## [0.1.4] 2026-05-16
+## [0.1.4] (in development)
 
-* **Docs: explicitly call out `Stylesheet` as `!Send + !Sync`.** No API change — the wrapper has always been single-threaded by default (`xsltStylesheetPtr` is a raw `*mut`, which makes the auto-traits negative) — but the new doc block makes the contract explicit and walks callers through the two supported reuse patterns: park the parsed stylesheet in `thread_local!` storage for per-thread reuse, or wrap in a `Mutex` for cross-thread sharing.
-* An earlier draft of this release relaxed `Stylesheet::transform` from `&mut self` to `&self` and added `unsafe impl Send + Sync`. We rolled that back: libxslt is not documented as thread-safe, and the apply path is not audited to be read-only on the stylesheet (it may write back into namespace-internalisation caches or error context fields). The same caution that resolved issue #6 (libxslt's hidden mutation of the input `Document`) applies to the stylesheet object too. The `&mut self` requirement remains, sequential reuse from a single thread is the supported pattern.
 
 ## [0.1.3] 2026-22-04
 
