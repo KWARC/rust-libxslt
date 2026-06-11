@@ -1,7 +1,14 @@
 # Change Log
 
-## [0.1.4] (in development)
+## [0.1.4] 2026-06-11
 
+* Opt-in **static linking** of libxslt + libexslt. Set the `LIBXSLT_STATIC`
+  environment variable and `build.rs` probes via pkg-config with
+  `.statik(true)` (libexslt first, so its archive precedes the xslt/xml2 it
+  depends on), emitting `static=` link directives. Point `PKG_CONFIG_PATH`
+  at a non-system prefix holding PIC `libxslt.a` + `libexslt.a` to get a
+  binary with no runtime `libxslt.so` dependency. Unset (the default) is
+  unchanged: the original dynamic link.
 
 ## [0.1.3] 2026-22-04
 

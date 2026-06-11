@@ -2,6 +2,28 @@ extern crate pkg_config;
 use pkg_config::find_library;
 
 fn main() {
+  // Re-run if the opt-in static toggle flips.
+  println!("cargo:rerun-if-env-changed=LIBXSLT_STATIC");
+  // Opt-in static link: with LIBXSLT_STATIC set and PKG_CONFIG_PATH pointing at a
+  // non-system prefix carrying PIC `libxslt.a` + `libexslt.a`, `.statik(true)`
+  // emits `static=exslt`/`static=xslt` (+ transitive libxml2 and `-lm` from the
+  // .pc files). libexslt is probed FIRST so its archive precedes the xslt/xml2 it
+  // depends on in the static link order. pkg-config's static guard refuses a
+  // `static=` for /usr/lib system paths, so the non-system prefix is what makes
+  // this work. Default (env unset) is the original dynamic behaviour below. Used
+  // for the self-contained, SONAME-independent release binary.
+  if std::env::var_os("LIBXSLT_STATIC").is_some() {
+    let mut cfg = pkg_config::Config::new();
+    cfg.statik(true);
+    cfg
+      .probe("libexslt")
+      .expect("static libexslt via pkg-config (set PKG_CONFIG_PATH to the static prefix)");
+    cfg
+      .probe("libxslt")
+      .expect("static libxslt via pkg-config (set PKG_CONFIG_PATH to the static prefix)");
+    return;
+  }
+
   // For both libxslt and libexslt we first ask pkg-config; if that fails
   // (e.g. minimal installs without the .pc files) we emit a plain
   // `cargo:rustc-link-lib=dylib=…` so systems with the library on the
