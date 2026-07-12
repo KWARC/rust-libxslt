@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.1.5] 2026-07-12
+
+* Windows/MSVC support: resolve libxslt through **vcpkg**, mirroring
+  rust-libxml's libxml2 resolution. `vcpkg::Config::new().find_package("libxslt")`
+  emits link directives for the port's `xslt` + `exslt` libraries and its
+  dependencies, keyed by `VCPKG_ROOT` + `VCPKGRS_TRIPLET` (e.g.
+  `x64-windows-static-md`). Falls through to the existing pkg-config/dylib
+  probes when vcpkg finds nothing, so current platforms are unaffected.
+
 ## [0.1.4] 2026-06-11
 
 * Opt-in **static linking** of libxslt + libexslt. Set the `LIBXSLT_STATIC`
