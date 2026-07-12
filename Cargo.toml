@@ -18,5 +18,10 @@ libxml = "0.3.0"
 [build-dependencies]
 pkg-config = "0.3.2"
 
+# Windows/MSVC resolves libxslt through vcpkg (same pattern as rust-libxml):
+# `vcpkg install libxslt:<triplet>` + VCPKG_ROOT/VCPKGRS_TRIPLET env vars.
+[target.'cfg(all(target_family = "windows", target_env = "msvc"))'.build-dependencies]
+vcpkg = "0.2"
+
 [lib]
 name = "libxslt"
