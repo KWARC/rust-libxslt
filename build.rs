@@ -4,6 +4,23 @@ use pkg_config::find_library;
 fn main() {
   // Re-run if the opt-in static toggle flips.
   println!("cargo:rerun-if-env-changed=LIBXSLT_STATIC");
+
+  // Windows/MSVC: resolve libxslt through vcpkg, mirroring rust-libxml's
+  // libxml2 resolution (`vcpkg install libxslt:<triplet>`, then VCPKG_ROOT
+  // + VCPKGRS_TRIPLET at build time). `find_package` emits the
+  // rustc-link-search/link-lib directives for the port's libraries — both
+  // xslt and exslt ship in the one `libxslt` port — and for its
+  // dependencies (libxml2 etc.). With a `*-static*` triplet the link is
+  // static; there is no separate LIBXSLT_STATIC toggle on this path. On
+  // vcpkg failure, fall through to the generic probes below so an MSVC
+  // setup with its own pkg-config/system libs keeps working.
+  #[cfg(all(target_family = "windows", target_env = "msvc"))]
+  {
+    match vcpkg::Config::new().find_package("libxslt") {
+      Ok(_) => return,
+      Err(e) => eprintln!("vcpkg did not find libxslt: {e}"),
+    }
+  }
   // Opt-in static link: with LIBXSLT_STATIC set and PKG_CONFIG_PATH pointing at a
   // non-system prefix carrying PIC `libxslt.a` + `libexslt.a`, `.statik(true)`
   // emits `static=exslt`/`static=xslt` (+ transitive libxml2 and `-lm` from the
